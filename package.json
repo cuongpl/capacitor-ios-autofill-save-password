@@ -1,0 +1,52 @@
+{
+  "name": "capacitor-ios-autofill-save-password",
+  "version": "1.1.0",
+  "description": "Prompt to display dialog for saving password to keychain for iOS webview app.",
+  "main": "dist/plugin.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "scripts": {
+    "swiftlint": "node-swiftlint",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "Cuong Phan",
+  "license": "MIT",
+  "devDependencies": {
+    "@capacitor/core": "^1.5.3",
+    "@capacitor/ios": "^1.5.3",
+    "@ionic/swiftlint-config": "^1.0.0",
+    "@rollup/plugin-node-resolve": "^8.1.0",
+    "swiftlint": "^1.0.1",
+    "typescript": "^3.4.5"
+  },
+  "peerDependencies": {
+    "@capacitor/core": "^2.4.6"
+  },
+  "files": [
+    "ios/",
+    "CapacitorIosAutofillSavePassword.podspec"
+  ],
+  "keywords": [
+    "capacitor",
+    "plugin",
+    "native",
+    "ios",
+    "autofill",
+    "keychain"
+  ],
+  "capacitor": {
+    "ios": {
+      "src": "ios"
+    }
+  },
+  "swiftlint": "@ionic/swiftlint-config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cuongpl/capacitor-ios-autofill-save-password.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cuongpl/capacitor-ios-autofill-save-password/issues"
+  }
+}
