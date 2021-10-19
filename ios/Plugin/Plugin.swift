@@ -10,7 +10,7 @@ public class SavePassword: CAPPlugin {
         loginScreen.usernameTextField.text = call.getString("username") ?? ""
         loginScreen.passwordTextField.text = call.getString("password") ?? ""
         DispatchQueue.main.async {
-            self.bridge.getWebView()?.addSubview(loginScreen.view)
+            self.bridge?.getWebView()?.addSubview(loginScreen.view)
             loginScreen.view.removeFromSuperview()
         }
     }
