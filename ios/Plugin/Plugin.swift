@@ -6,11 +6,11 @@ import UIKit
 public class SavePassword: CAPPlugin {
 
     @objc func promptDialog(_ call: CAPPluginCall) {
-        let loginScreen = LoginScreenViewController()
-        loginScreen.usernameTextField.text = call.getString("username") ?? ""
-        loginScreen.passwordTextField.text = call.getString("password") ?? ""
         DispatchQueue.main.async {
-            self.bridge?.getWebView()?.addSubview(loginScreen.view)
+            let loginScreen = LoginScreenViewController()
+            loginScreen.usernameTextField.text = call.getString("username") ?? ""
+            loginScreen.passwordTextField.text = call.getString("password") ?? ""
+            self.bridge?.webView?.addSubview(loginScreen.view)
             loginScreen.view.removeFromSuperview()
         }
     }

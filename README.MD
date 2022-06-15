@@ -8,18 +8,20 @@ You must set up your app’s associated domains. To learn how to set up your app
 
 ## How to use
 ```ts
-import { Plugins } from '@capacitor/core';
-const { SavePassword } = Plugins;
+import { Capacitor } from '@capacitor/core';
+import { SavePassword } from 'capacitor-ios-autofill-save-password';
     
-login (username, password) {
+login(username: string, password: string) {
     // your login logic here
         
     // call the plugin if login is successful on iOS
-    if (this.platform.is('ios')) {
+    if (Capacitor.getPlatform() === 'ios') {
         SavePassword.promptDialog({
-        username: username,
-        password: password
-        });
+            username: username,
+            password: password,
+        })
+        .then(() => console.log('promptDialog success'))
+        .catch((err) => console.error('promptDialog failure', err));
     }
 }
 ```
