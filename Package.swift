@@ -2,11 +2,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "CapacitorAutofillSavePassword",
+    name: "CapacitorIosAutofillSavePassword",
     platforms: [.iOS(.v13)],
     products: [
         .library(
-            name: "CapacitorAutofillSavePassword",
+            name: "CapacitorIosAutofillSavePassword",
             targets: ["SavePassword"])
     ],
     dependencies: [
