@@ -3,7 +3,12 @@ import Capacitor
 import UIKit
 
 @objc(SavePassword)
-public class SavePassword: CAPPlugin {
+public class SavePassword: CAPPlugin, CAPBridgedPlugin {
+    public let identifier = "SavePassword"
+    public let jsName = "SavePassword"
+    public let pluginMethods: [CAPPluginMethod] = [
+        CAPPluginMethod(name: "promptDialog", returnType: CAPPluginReturnPromise)
+    ]
 
     @objc func promptDialog(_ call: CAPPluginCall) {
         DispatchQueue.main.async {
