@@ -31,7 +31,8 @@
   "files": [
     "dist/",
     "ios/",
-    "CapacitorIosAutofillSavePassword.podspec"
+    "CapacitorIosAutofillSavePassword.podspec",
+    "Package.swift"
   ],
   "keywords": [
     "capacitor",
